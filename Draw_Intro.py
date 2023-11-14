@@ -3,7 +3,6 @@ import time
 import pygame
 from random import randint, choice
 from Draw_Blocks import draw_blocks
-from Rules import rules
 from Images_Of_Blocks import images
 from Global import PALM, CURSOR, IMAGES_OF_BANGS, IMAGE_OF_INTRO_TANK, SURF
 
@@ -251,20 +250,7 @@ def draw_intro(
 
                     time.sleep(0.2)
 
-            elif 122 < mouse[0] < 677 and 20 < mouse[1] < 140:
-                pygame.mouse.set_cursor(PALM)
-
-                screen.blit(text_start_game, (300, 530))
-                screen.blit(text_welcome, (100, 420))
-
-                if any(click):
-                    sound = pygame.mixer.Sound('sounds/shot.wav')
-                    sound.set_volume(0.7)
-                    sound.play()
-
-                    rules(screen, score)
-
-            elif 280 < mouse[0] < 530 and 100 < mouse[1] < 390:
+            elif 280 < mouse[0] < 530 and 130 < mouse[1] < 390:
                 pygame.mouse.set_cursor(PALM)
                 screen.blit(text_welcome, (100, 420))
 
